@@ -5,192 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drumclass Milano</title>
   <style>
-    /* Reset e stili di base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #fff; color: #000; }
-
-    /* Header minimal */
-    header { background: #000; color: #fff; text-align: center; padding: 1rem 0; }
-    header h1 { font-size: 2rem; }
-
-    /* Hero */
-    .hero { text-align: center; padding: 4rem 2rem; background: #f39c12; color: #fff; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; }
-
-    /* Sezioni */
-    section { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
-    section h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: #000; }
-    section p { margin-bottom: 1rem; }
-
-    /* Docenti */
-    .docenti { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .docente { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-    .docente h3 { margin-bottom: 0.5rem; }
-    .docente iframe { border-radius: 10px; width: 100%; aspect-ratio: 16/9; margin-top: 1rem; }
-
-    /* Corsi e Eventi */
-    .corsi, .eventi { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .corso, .evento { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    .corso h3, .evento h3 { margin-bottom: 0.5rem; color: #f39c12; }
-
-    /* Form */
-    form { display: grid; gap: 1rem; }
-    input { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
-    button { padding: 0.8rem; border: none; border-radius: 5px; background: #f39c12; color: #fff; font-weight: bold; cursor: pointer; }
-    button:hover { background: #d35400; }
-
-    /* Contatti */
-    #contatti { text-align: center; }
-    #contatti a { color: #f39c12; text-decoration: none; font-weight: bold; }
-    #contatti a:hover { text-decoration: underline; }
-
-    /* Footer */
-    footer { text-align: center; padding: 2rem; background: #000; color: #fff; margin-top: 3rem; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #000; }
+    header { background: #000; color: #fff; text-align: center; padding: 20px; }
+    h1 { margin: 0; font-size: 2em; }
+    section { padding: 20px; }
+    h2 { color: #111; margin-top: 0; }
+    form { margin-top: 15px; }
+    input { padding: 10px; margin: 5px 0; width: 100%; max-width: 300px; display: block; }
+    button { padding: 10px 20px; background: #000; color: #fff; border: none; cursor: pointer; }
+    button:hover { background: #444; }
+    footer { background: #000; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+    .contact { margin-top: 10px; }
+    .contact a { color: #25D366; text-decoration: none; font-weight: bold; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Drumclass Milano</h1>
+    <h1>🥁 Drumclass Milano</h1>
+    <p>La prima sede italiana del franchising internazionale con 350 sedi nel mondo!</p>
   </header>
 
-  <section class="hero">
-    <h1>Impara la batteria con i migliori maestri</h1>
-    <p>Contattaci al <strong>3401223026</strong></p>
-    <p><a href="https://wa.me/393401223026" target="_blank">📱 Scrivici su WhatsApp</a></p>
+  <section>
+    <h2>📖 Chi siamo</h2>
+    <p>
+      Drumclass è un franchising internazionale con <b>350 sedi nel mondo</b>.<br>
+      Questa è la <b>prima in Italia!</b> 🎉<br><br>
+      📚 Insegniamo la teoria attraverso la pratica fin dalla prima lezione.<br><br>
+      🎸 <b>Impari suonando davvero</b>, insieme a un chitarrista/cantante dal vivo – anche se parti da zero o pensi di non essere portato, ti guideremo passo passo e ti sorprenderai di cosa riesci a fare già alla prima lezione!<br>
+      👥 Le lezioni sono collettive, quindi puoi venire anche con un amico.<br>
+      ⚡ Approccio intuitivo e pratico!
+    </p>
   </section>
 
-  <section id="la-scuola">
-    <h2>🎵 Drumclass Milano</h2>
-    <p>🌍 Drumclass è un franchising internazionale con 350 sedi nel mondo.<br>
-    🇮🇹 Questa è la prima in Italia! Insegniamo la teoria attraverso la pratica, fin dalla prima lezione.</p>
-    <p>🎸 Impari suonando davvero, insieme a un chitarrista/cantante dal vivo – anche se parti da zero o pensi di non essere portato, ti guideremo passo passo e ti sorprenderai di cosa riesci a fare già alla prima lezione!</p>
-    <p>👥 La lezione è collettiva, quindi puoi venire anche con un amico.</p>
-    <p>💡 Approccio intuitivo e pratico, per imparare divertendoti!</p>
+  <section>
+    <h2>🥁 Corso di Batteria</h2>
+    <p>Iscriviti lasciando il tuo nome e numero di telefono. Ti contatteremo al più presto!</p>
+    <form id="drumForm">
+      <input type="text" id="drumName" placeholder="Il tuo nome" required>
+      <input type="tel" id="drumPhone" placeholder="Il tuo telefono" required>
+      <button type="submit">Iscriviti</button>
+    </form>
   </section>
 
-  <section id="docenti">
-    <h2>I Nostri Docenti</h2>
-    <div class="docenti">
-      <div class="docente">
-        <h3>Giovanni Gasparre</h3>
-        <iframe src="https://www.youtube.com/embed/2FqCKPxIxSQ" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="docente">
-        <h3>Max Klein</h3>
-        <iframe src="https://www.youtube.com/embed/On07vPGMlc8" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="docente">
-        <h3>Raffaele Pio Leone</h3>
-      </div>
-    </div>
+  <section>
+    <h2>🎸 Corso di Basso</h2>
+    <p>Vuoi imparare il basso? Lascia i tuoi dati qui sotto e un insegnante ti contatterà.</p>
+    <form id="bassForm">
+      <input type="text" id="bassName" placeholder="Il tuo nome" required>
+      <input type="tel" id="bassPhone" placeholder="Il tuo telefono" required>
+      <button type="submit">Iscriviti</button>
+    </form>
   </section>
 
-  <section id="corsi">
-    <h2>Corsi</h2>
-    <div class="corsi">
-      <div class="corso">
-        <h3>Corso di batteria</h3>
-        <p>Impara a suonare la batteria con i migliori maestri di Drumclass Milano. Il corso è pensato per principianti e intermedi, con esercizi pratici e musicali per sviluppare ritmo, groove e tecnica.</p>
-        <form id="kommoFormBatteria">
-          <input type="text" name="name" placeholder="Nome" required>
-          <input type="text" name="phone" placeholder="Numero di telefono" required>
-          <button type="submit">Iscriviti</button>
-        </form>
-      </div>
-      <div class="corso">
-        <h3>Corso di basso</h3>
-        <p>Iscriviti alle lezioni di basso con il maestro <strong>Ermes Locatelli</strong>.</p>
-        <p>🚩 BASS PLAYER della “Jerry Calà Superband”.<br>
-        Bassista e turnista di: Zelig, Pfm, Nek, Giorgio Faletti, Paola Folli, Aida Cooper, Eugenio Mori, Walter Marino, Michael Rosen, Cristian De Sica, Leonardo Manera, Riccardo Maffoni, Daniele Ronda, Antonio Maggio, Salvo Correri, Gabor Lesko e molti altri.</p>
-        <form id="kommoFormBasso">
-          <input type="text" name="name" placeholder="Nome" required>
-          <input type="text" name="phone" placeholder="Numero di telefono" required>
-          <button type="submit">Iscriviti</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="eventi">
-    <h2>Eventi e Comunità</h2>
-    <div class="eventi">
-      <div class="evento">
-        <h3>Masterclass 21 settembre con Andrea Bessone</h3>
-        <p>Due sale: cambio pelli, settaggio rullante, differenze pelli + workout sui pad per principianti.</p>
-      </div>
-      <div class="evento">
-        <h3>Newsletter Drumclass</h3>
-        <p>Resta aggiornato su eventi e lezioni.</p>
-        <a href="#" target="_blank">Iscriviti alla newsletter</a>
-      </div>
-      <div class="evento">
-        <h3>Collaborazione</h3>
-        <p>Drumclass Milano collabora con <strong>Thomann</strong>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="dove-siamo">
+  <section>
     <h2>📍 Dove siamo?</h2>
-    <p>🚇 A 7 minuti a piedi da Metro M1 Sesto 1° Maggio / Sesto FS</p>
-    <p>🚗 In auto? Siamo attaccati a Viale Fulvio Testi, la via che collega Milano a Monza!</p>
-    <p>🏠 Indirizzo: Via San Giovanni Bosco 4, Cinisello Balsamo</p>
-    <p>🔑 Ingresso da Via Monte Sabotino (prendi la discesa subito a destra)</p>
-    <p>🌍 <a href="https://maps.app.goo.gl/hTHySEkPRFkUj7oU7?g_st=ic" target="_blank">Apri la mappa</a></p>
+    <p>
+      🚇 A 7 minuti a piedi da Metro M1 Sesto 1° Maggio / Sesto FS<br>
+      🚗 In auto? Siamo attaccati a Viale Fulvio Testi, la via che collega Milano a Monza!<br><br>
+      🌍 <a href="https://maps.app.goo.gl/hTHySEkPRFkUj7oU7?g_st=ic" target="_blank">Apri su Google Maps</a><br><br>
+      🏠 Indirizzo: <b>Via San Giovanni Bosco 4, Cinisello Balsamo</b><br>
+      🔑 Ingresso da Via Monte Sabotino (prendi la discesa subito a destra)
+    </p>
   </section>
 
-  <section id="contatti">
-    <h2>Contattaci</h2>
-    <p>Telefono: <strong>3401223026</strong></p>
-    <p><a href="https://wa.me/393401223026" target="_blank">📱 WhatsApp Mobile</a> | <a href="https://web.whatsapp.com/send?phone=393401223026" target="_blank">WhatsApp Web</a></p>
-  </section>
-
-  <section id="privacy">
-    <h2>Privacy e Cookie Policy</h2>
-    <p>Il sito Drumclass Milano rispetta la normativa vigente in materia di protezione dei dati personali (GDPR). I dati forniti tramite i moduli saranno utilizzati esclusivamente per rispondere alle richieste e per l’invio di comunicazioni relative ai corsi ed eventi.</p>
-    <p>Non cediamo dati a terzi. L’utente può richiedere la cancellazione scrivendo a <a href="mailto:info@drumclassmilano.it">info@drumclassmilano.it</a>.</p>
-    <p>Il sito utilizza cookie tecnici per il corretto funzionamento e cookie analitici anonimi.</p>
+  <section class="contact">
+    <h2>📞 Contatti</h2>
+    <p>
+      Scrivici su 
+      <a href="https://wa.me/393331234567" target="_blank">WhatsApp 💬</a><br>
+      📧 Email: info@drumclassmilano.it<br>
+      🔖 P.IVA: 13191870966
+    </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Drumclass Milano - Tutti i diritti riservati</p>
-    <p>Partita IVA: <strong>01234567890</strong></p>
-    <p><a href="#privacy" style="color:white;">Privacy e Cookie Policy</a></p>
+    <p>© 2025 Drumclass Milano - Tutti i diritti riservati</p>
   </footer>
 
-  <!-- Script per inviare i form a Kommo -->
   <script>
-    function sendToKommo(formId) {
-      const form = document.getElementById(formId);
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = form.querySelector('input[name="name"]').value;
-        const phone = form.querySelector('input[name="phone"]').value;
-
-        fetch('https://ne-shkola.leadovsky.agency/api/hookcron/amocrm/hook', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: name, phone: phone })
-        })
-        .then(response => {
-          if(response.ok) {
-            alert('Iscrizione inviata con successo!');
-            form.reset();
-          } else {
-            alert('Errore nell\'invio. Riprova.');
-          }
-        })
-        .catch(error => {
-          alert('Errore: ' + error);
-        });
-      });
+    // Funzione per inviare dati
+    function sendData(name, phone) {
+      fetch('https://webhook.site/64e277c0-cbe1-40e2-bda7-f119dec4e598', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ first_name: name, phone_mobile: phone })
+      })
+      .then(r => r.text())
+      .then(res => console.log("Risposta Webhook:", res))
+      .catch(err => console.error("Errore:", err));
     }
 
-    sendToKommo('kommoFormBatteria');
-    sendToKommo('kommoFormBasso');
-  </script>
+    // Form Batteria
+    document.getElementById('drumForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('drumName').value;
+      const phone = document.getElementById('drumPhone').value;
+      sendData(name, phone);
+      alert("Dati inviati per il corso di Batteria!");
+    });
 
+    // Form Basso
+    document.getElementById('bassForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('bassName').value;
+      const phone = document.getElementById('bassPhone').value;
+      sendData(name, phone);
+      alert("Dati inviati per il corso di Basso!");
+    });
+  </script>
 </body>
 </html>
