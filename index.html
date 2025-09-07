@@ -5,61 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drumclass Milano</title>
   <style>
+    /* Reset e stili di base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
-    header { background: #222; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
-    header h1 { font-size: 1.8rem; }
-    nav ul { list-style: none; display: flex; justify-content: flex-end; }
-    nav ul li { margin-left: 20px; }
-    nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-    nav ul li a:hover { color: #f39c12; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #fff; color: #000; }
 
-    section { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
-    section h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #222; text-align: center; }
+    /* Header minimal */
+    header { background: #000; color: #fff; text-align: center; padding: 1rem 0; }
+    header h1 { font-size: 2rem; }
 
+    /* Hero */
     .hero { text-align: center; padding: 4rem 2rem; background: #f39c12; color: #fff; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; }
 
+    /* Sezioni */
+    section { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: #000; }
+    section p { margin-bottom: 1rem; }
+
+    /* Docenti */
     .docenti { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
     .docente { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
     .docente h3 { margin-bottom: 0.5rem; }
     .docente iframe { border-radius: 10px; width: 100%; aspect-ratio: 16/9; margin-top: 1rem; }
 
+    /* Corsi e Eventi */
     .corsi, .eventi { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
     .corso, .evento { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
     .corso h3, .evento h3 { margin-bottom: 0.5rem; color: #f39c12; }
 
-    form { display: grid; gap: 1rem; max-width: 500px; margin: auto; }
-    input, textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+    /* Form */
+    form { display: grid; gap: 1rem; }
+    input { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
     button { padding: 0.8rem; border: none; border-radius: 5px; background: #f39c12; color: #fff; font-weight: bold; cursor: pointer; }
     button:hover { background: #d35400; }
 
-    footer { text-align: center; padding: 2rem; background: #222; color: #fff; margin-top: 3rem; }
+    /* Contatti */
+    #contatti { text-align: center; }
+    #contatti a { color: #f39c12; text-decoration: none; font-weight: bold; }
+    #contatti a:hover { text-decoration: underline; }
 
-    a { color: #f39c12; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    /* Footer */
+    footer { text-align: center; padding: 2rem; background: #000; color: #fff; margin-top: 3rem; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Drumclass Milano</h1>
-    <nav>
-      <ul>
-        <li><a href="#docenti">Docenti</a></li>
-        <li><a href="#corsi">Corsi</a></li>
-        <li><a href="#eventi">Eventi</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-        <li><a href="#privacy">Privacy</a></li>
-      </ul>
-    </nav>
   </header>
 
   <section class="hero">
-    <h1>Drumclass Milano</h1>
-    <p>Impara la batteria con i migliori maestri. Contattaci al <strong>3401223026</strong></p>
-    <p>
-      <a href="https://wa.me/393401223026" target="_blank" style="color:white;font-weight:bold;">Scrivici su WhatsApp</a>
-    </p>
+    <h1>Impara la batteria con i migliori maestri</h1>
+    <p>Contattaci al <strong>3401223026</strong></p>
+    <p><a href="https://wa.me/393401223026" target="_blank">📱 Scrivici su WhatsApp</a></p>
+  </section>
+
+  <section id="la-scuola">
+    <h2>🎵 Drumclass Milano</h2>
+    <p>🌍 Drumclass è un franchising internazionale con 350 sedi nel mondo.<br>
+    🇮🇹 Questa è la prima in Italia! Insegniamo la teoria attraverso la pratica, fin dalla prima lezione.</p>
+    <p>🎸 Impari suonando davvero, insieme a un chitarrista/cantante dal vivo – anche se parti da zero o pensi di non essere portato, ti guideremo passo passo e ti sorprenderai di cosa riesci a fare già alla prima lezione!</p>
+    <p>👥 La lezione è collettiva, quindi puoi venire anche con un amico.</p>
+    <p>💡 Approccio intuitivo e pratico, per imparare divertendoti!</p>
   </section>
 
   <section id="docenti">
@@ -83,8 +91,9 @@
     <h2>Corsi</h2>
     <div class="corsi">
       <div class="corso">
-        <h3>Lezione di prova</h3>
-        <form id="kommoForm">
+        <h3>Corso di batteria</h3>
+        <p>Impara a suonare la batteria con i migliori maestri di Drumclass Milano. Il corso è pensato per principianti e intermedi, con esercizi pratici e musicali per sviluppare ritmo, groove e tecnica.</p>
+        <form id="kommoFormBatteria">
           <input type="text" name="name" placeholder="Nome" required>
           <input type="text" name="phone" placeholder="Numero di telefono" required>
           <button type="submit">Iscriviti</button>
@@ -92,13 +101,14 @@
       </div>
       <div class="corso">
         <h3>Corso di basso</h3>
-        <p>
-          Iscriviti alle lezioni di basso con il maestro <strong>Ermes Locatelli</strong>.
-        </p>
-        <p>
-          🚩 BASS PLAYER della “Jerry Calà Superband”.<br>
-          Bassista e turnista di: Zelig, Pfm, Nek, Giorgio Faletti, Paola Folli, Aida Cooper, Eugenio Mori, Walter Marino, Michael Rosen, Cristian De Sica, Leonardo Manera, Riccardo Maffoni, Daniele Ronda, Antonio Maggio, Salvo Correri, Gabor Lesko e molti altri.
-        </p>
+        <p>Iscriviti alle lezioni di basso con il maestro <strong>Ermes Locatelli</strong>.</p>
+        <p>🚩 BASS PLAYER della “Jerry Calà Superband”.<br>
+        Bassista e turnista di: Zelig, Pfm, Nek, Giorgio Faletti, Paola Folli, Aida Cooper, Eugenio Mori, Walter Marino, Michael Rosen, Cristian De Sica, Leonardo Manera, Riccardo Maffoni, Daniele Ronda, Antonio Maggio, Salvo Correri, Gabor Lesko e molti altri.</p>
+        <form id="kommoFormBasso">
+          <input type="text" name="name" placeholder="Nome" required>
+          <input type="text" name="phone" placeholder="Numero di telefono" required>
+          <button type="submit">Iscriviti</button>
+        </form>
       </div>
     </div>
   </section>
@@ -122,30 +132,26 @@
     </div>
   </section>
 
+  <section id="dove-siamo">
+    <h2>📍 Dove siamo?</h2>
+    <p>🚇 A 7 minuti a piedi da Metro M1 Sesto 1° Maggio / Sesto FS</p>
+    <p>🚗 In auto? Siamo attaccati a Viale Fulvio Testi, la via che collega Milano a Monza!</p>
+    <p>🏠 Indirizzo: Via San Giovanni Bosco 4, Cinisello Balsamo</p>
+    <p>🔑 Ingresso da Via Monte Sabotino (prendi la discesa subito a destra)</p>
+    <p>🌍 <a href="https://maps.app.goo.gl/hTHySEkPRFkUj7oU7?g_st=ic" target="_blank">Apri la mappa</a></p>
+  </section>
+
   <section id="contatti">
     <h2>Contattaci</h2>
-    <p style="text-align:center;">Telefono: <strong>3401223026</strong></p>
-    <p style="text-align:center;">
-      <a href="https://wa.me/393401223026" target="_blank">WhatsApp Mobile</a> |
-      <a href="https://web.whatsapp.com/send?phone=393401223026" target="_blank">WhatsApp Web</a>
-    </p>
+    <p>Telefono: <strong>3401223026</strong></p>
+    <p><a href="https://wa.me/393401223026" target="_blank">📱 WhatsApp Mobile</a> | <a href="https://web.whatsapp.com/send?phone=393401223026" target="_blank">WhatsApp Web</a></p>
   </section>
 
   <section id="privacy">
     <h2>Privacy e Cookie Policy</h2>
-    <p>
-      Il sito Drumclass Milano rispetta la normativa vigente in materia di protezione dei dati personali (GDPR).
-      I dati forniti tramite i moduli di contatto o iscrizione alle newsletter saranno utilizzati esclusivamente
-      per rispondere alle richieste e per l’invio di comunicazioni relative ai nostri corsi ed eventi.
-    </p>
-    <p>
-      Non cediamo dati a terzi. L’utente può in qualsiasi momento richiedere la cancellazione dei propri dati scrivendo a 
-      <a href="mailto:info@drumclassmilano.it">info@drumclassmilano.it</a>.
-    </p>
-    <p>
-      Il sito utilizza cookie tecnici per il corretto funzionamento e cookie analitici anonimi. L’utente può 
-      configurare le preferenze relative ai cookie tramite le impostazioni del browser.
-    </p>
+    <p>Il sito Drumclass Milano rispetta la normativa vigente in materia di protezione dei dati personali (GDPR). I dati forniti tramite i moduli saranno utilizzati esclusivamente per rispondere alle richieste e per l’invio di comunicazioni relative ai corsi ed eventi.</p>
+    <p>Non cediamo dati a terzi. L’utente può richiedere la cancellazione scrivendo a <a href="mailto:info@drumclassmilano.it">info@drumclassmilano.it</a>.</p>
+    <p>Il sito utilizza cookie tecnici per il corretto funzionamento e cookie analitici anonimi.</p>
   </section>
 
   <footer>
@@ -154,12 +160,37 @@
     <p><a href="#privacy" style="color:white;">Privacy e Cookie Policy</a></p>
   </footer>
 
+  <!-- Script per inviare i form a Kommo -->
   <script>
-  document.getElementById('kommoForm').addEventListener('submit', function(e) {
-      e.preventDefault(); 
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
+    function sendToKommo(formId) {
+      const form = document.getElementById(formId);
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = form.querySelector('input[name="name"]').value;
+        const phone = form.querySelector('input[name="phone"]').value;
 
-      fetch('https://ne-shkola.leadovsky.agency/api/hookcron/amocrm/hook', {
-          method: '
+        fetch('https://ne-shkola.leadovsky.agency/api/hookcron/amocrm/hook', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, phone: phone })
+        })
+        .then(response => {
+          if(response.ok) {
+            alert('Iscrizione inviata con successo!');
+            form.reset();
+          } else {
+            alert('Errore nell\'invio. Riprova.');
+          }
+        })
+        .catch(error => {
+          alert('Errore: ' + error);
+        });
+      });
+    }
+
+    sendToKommo('kommoFormBatteria');
+    sendToKommo('kommoFormBasso');
+  </script>
+
+</body>
+</html>
