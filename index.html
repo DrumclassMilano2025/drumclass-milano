@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drumclass Milano</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
+    header { background: #222; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+    header h1 { font-size: 1.8rem; }
+    nav ul { list-style: none; display: flex; justify-content: flex-end; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { color: #f39c12; }
+
+    section { padding: 3rem 2rem; max-width: 1200px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #222; text-align: center; }
+
+    .hero { text-align: center; padding: 4rem 2rem; background: #f39c12; color: #fff; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .docenti { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .docente { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+    .docente h3 { margin-bottom: 0.5rem; }
+    .docente iframe { border-radius: 10px; width: 100%; aspect-ratio: 16/9; margin-top: 1rem; }
+
+    .corsi, .eventi { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .corso, .evento { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .corso h3, .evento h3 { margin-bottom: 0.5rem; color: #f39c12; }
+
+    form { display: grid; gap: 1rem; max-width: 500px; margin: auto; }
+    input, textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+    button { padding: 0.8rem; border: none; border-radius: 5px; background: #f39c12; color: #fff; font-weight: bold; cursor: pointer; }
+    button:hover { background: #d35400; }
+
+    footer { text-align: center; padding: 2rem; background: #222; color: #fff; margin-top: 3rem; }
+
+    a { color: #f39c12; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Drumclass Milano</h1>
+    <nav>
+      <ul>
+        <li><a href="#docenti">Docenti</a></li>
+        <li><a href="#corsi">Corsi</a></li>
+        <li><a href="#eventi">Eventi</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Drumclass Milano</h1>
+    <p>Impara la batteria con i migliori maestri. Contattaci al <strong>3401223026</strong></p>
+    <p>
+      <a href="https://wa.me/393401223026" target="_blank" style="color:white;font-weight:bold;">Scrivici su WhatsApp</a>
+    </p>
+  </section>
+
+  <section id="docenti">
+    <h2>I Nostri Docenti</h2>
+    <div class="docenti">
+      <div class="docente">
+        <h3>Giovanni Gasparre</h3>
+        <iframe src="https://www.youtube.com/embed/2FqCKPxIxSQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="docente">
+        <h3>Max Klein</h3>
+        <iframe src="https://www.youtube.com/embed/On07vPGMlc8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="docente">
+        <h3>Raffaele Pio Leone</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="corsi">
+    <h2>Corsi</h2>
+    <div class="corsi">
+      <div class="corso">
+        <h3>Lezione di prova</h3>
+        <form>
+          <input type="text" placeholder="Nome" required>
+          <input type="text" placeholder="Numero di telefono" required>
+          <button type="submit">Iscriviti</button>
+        </form>
+      </div>
+      <div class="corso">
+        <h3>Corso di basso</h3>
+        <p>
+          Iscriviti alle lezioni di basso con il maestro <strong>Ermes Locatelli</strong>.
+        </p>
+        <p>
+          🚩 BASS PLAYER della “Jerry Calà Superband”.<br>
+          Bassista e turnista di: Zelig, Pfm, Nek, Giorgio Faletti, Paola Folli, Aida Cooper, Eugenio Mori, Walter Marino, Michael Rosen, Cristian De Sica, Leonardo Manera, Riccardo Maffoni, Daniele Ronda, Antonio Maggio, Salvo Correri, Gabor Lesko e molti altri.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="eventi">
+    <h2>Eventi e Comunità</h2>
+    <div class="eventi">
+      <div class="evento">
+        <h3>Masterclass 21 settembre con Andrea Bessone</h3>
+        <p>Due sale: cambio pelli, settaggio rullante, differenze pelli + workout sui pad per principianti.</p>
+      </div>
+      <div class="evento">
+        <h3>Newsletter Drumclass</h3>
+        <p>Resta aggiornato su eventi e lezioni.</p>
+        <a href="#" target="_blank">Iscriviti alla newsletter</a>
+      </div>
+      <div class="evento">
+        <h3>Collaborazione</h3>
+        <p>Drumclass Milano collabora con <strong>Toman</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>Contattaci</h2>
+    <p style="text-align:center;">Telefono: <strong>3401223026</strong></p>
+    <p style="text-align:center;">
+      <a href="https://wa.me/393401223026" target="_blank">WhatsApp Mobile</a> |
+      <a href="https://web.whatsapp.com/send?phone=393401223026" target="_blank">WhatsApp Web</a>
+    </p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy e Cookie Policy</h2>
+    <p>
+      Il sito Drumclass Milano rispetta la normativa vigente in materia di protezione dei dati personali (GDPR).
+      I dati forniti tramite i moduli di contatto o iscrizione alle newsletter saranno utilizzati esclusivamente
+      per rispondere alle richieste e per l’invio di comunicazioni relative ai nostri corsi ed eventi.
+    </p>
+    <p>
+      Non cediamo dati a terzi. L’utente può in qualsiasi momento richiedere la cancellazione dei propri dati scrivendo a 
+      <a href="mailto:info@drumclassmilano.it">info@drumclassmilano.it</a>.
+    </p>
+    <p>
+      Il sito utilizza cookie tecnici per il corretto funzionamento e cookie analitici anonimi. L’utente può 
+      configurare le preferenze relative ai cookie tramite le impostazioni del browser.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Drumclass Milano - Tutti i diritti riservati</p>
+    <p>Partita IVA: <strong>01234567890</strong></p>
+    <p><a href="#privacy" style="color:white;">Privacy e Cookie Policy</a></p>
+  </footer>
+</body>
+</html>
+
+
+
