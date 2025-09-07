@@ -84,9 +84,9 @@
     <div class="corsi">
       <div class="corso">
         <h3>Lezione di prova</h3>
-        <form>
-          <input type="text" placeholder="Nome" required>
-          <input type="text" placeholder="Numero di telefono" required>
+        <form id="kommoForm">
+          <input type="text" name="name" placeholder="Nome" required>
+          <input type="text" name="phone" placeholder="Numero di telefono" required>
           <button type="submit">Iscriviti</button>
         </form>
       </div>
@@ -117,7 +117,7 @@
       </div>
       <div class="evento">
         <h3>Collaborazione</h3>
-        <p>Drumclass Milano collabora con <strong>Toman</strong>.</p>
+        <p>Drumclass Milano collabora con <strong>Thomann</strong>.</p>
       </div>
     </div>
   </section>
@@ -153,8 +153,13 @@
     <p>Partita IVA: <strong>01234567890</strong></p>
     <p><a href="#privacy" style="color:white;">Privacy e Cookie Policy</a></p>
   </footer>
-</body>
-</html>
 
+  <script>
+  document.getElementById('kommoForm').addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
 
-
+      fetch('https://ne-shkola.leadovsky.agency/api/hookcron/amocrm/hook', {
+          method: '
